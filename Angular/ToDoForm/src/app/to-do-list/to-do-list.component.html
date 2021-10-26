@@ -1,0 +1,48 @@
+<div class="container m-5 p-2 rounded mx-auto bg-light shadow">
+  <!-- App title section -->
+  <div class="row m-1 p-4">
+      <div class="col">
+          <div class="p-1 h1 text-primary text-center mx-auto display-inline-block">
+              <i class="fa fa-check  text-white rounded p-2"></i>
+              My Todo
+          </div>
+      </div>
+  </div>
+
+
+  <div class="row m-1 p-3">
+    <div class="col col-11 mx-auto">
+        <div class="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
+          <div class="col">
+            <input  class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded"  #task type = "text" id ="" name = "txtTodo" 
+             placeholder="Add new .." [(ngModel)] = "tasks" class="form-control">
+             </div>
+             <div class="col-auto px-0 mx-0 mr-2">
+          <button type="button" class="btn btn-primary btn-block" (click)="addtask(task.value)" >Add Task</button>
+          </div>
+        </div>
+        
+   
+  </div>
+  
+  <div >
+    <br/>
+    <h4> TaskList </h4>
+    <ol >
+      <div>
+      <!-- here the index is very important for the splice the element, if click on  the X then it take the index of that elemt and send it to the ferther to splice... -->
+      <li *ngFor="let task of TaskList;">
+
+      
+        <input type="checkbox"  #taskcheck [checked]="task.isDone" (change)="onTaskCompletion(taskcheck.checked, task)"   
+        ><label > {{ task.title }}  </label>
+    
+        <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end"> -->
+  <input type="button" value="Remove"  class="btn btn-primary " style="float:right" (click) = "removeTask(task._id)"> 
+<!-- </div> -->
+</li>
+     </div>
+     </ol>
+     </div>
+     </div>
+     

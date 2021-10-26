@@ -1,0 +1,77 @@
+  li{
+    padding:10px;
+  }
+  label{
+    margin-left:10px;
+  }
+  .box1 {
+    border: solid 1px #006699;
+    padding: 20px;
+    background: #f3f3f3;
+    border-radius: 5px;
+  }
+
+  .todos input.textfield {
+    width: 480px;
+    height: 36px;
+    margin-right: 20px;
+    font-size: 1.4em;
+    vertical-align: top;
+  }
+  
+
+  .todos input.checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .todos .checked {
+    text-decoration: line-through;
+  }
+
+  .todos button {
+    height: 36px;
+    font-size: 1.1em;
+    vertical-align: top;
+    border: solid 1px #999;
+    border-radius: 2px;
+  }
+
+  .todos .delete-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+  ul li:hover {
+    background: #ddd;
+  
+  }
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }  
+  label {
+    font-size: 1.5em;
+  }
+  
+  input[type=checkbox]:checked + label {
+    color:red;
+    text-decoration: line-through;
+  } /*This is the MDN spec for doing this*/
+  
+
+
+
+  
